@@ -1,0 +1,5 @@
+{
+  "name": "Eto API - development",
+  "version": "1.0.0",
+  "db-url": "mongodb://localhost:27017/ping_dev"
+}

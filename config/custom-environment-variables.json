@@ -1,0 +1,10 @@
+{
+  "jwtPrivateKey": "ping_jwtPrivateKey",
+  "payStackKey": "app_paystackKey",
+  "appEmail": "app_email",
+  "appEmailPassword": "app_emailPassword",
+  "emailHost": "app_emailHost",
+  "emailPort": "app_emailPort",
+  "pingPhone": "app_pingPhone",
+  "clientAppBaseUrl": "app_clientAppBaseUrl"
+}

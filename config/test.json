@@ -1,0 +1,5 @@
+{
+  "jwtPrivateKey": "1234",
+  "db-url": "mongodb://localhost:27017/ping_test",
+  "password": "123"
+}

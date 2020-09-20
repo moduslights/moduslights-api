@@ -1,0 +1,12 @@
+{
+  "jwtPrivateKey": "12345",
+  "payStackKey": "sk_test_724b57801302cdc06ed6f97e7e3fa9954e076190",
+  "email": "test@gmail.com",
+  "emailPassword": "password123",
+  "appEmail": "support@moduslights.com",
+  "appEmailPassword": "getgoal123",
+  "emailHost": "smtp.zoho.com",
+  "emailPort": "465",
+  "pingPhone": "+2349029732153",
+  "clientAppBaseUrl": "http://ping-afri.com/"
+}
