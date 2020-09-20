@@ -5,8 +5,8 @@
   "emailPassword": "",
   "appEmail": "",
   "appEmailPassword": "",
-  "emailHost": "smtp.zoho.com",
-  "emailPort": "465",
+  "emailHost": "",
+  "emailPort": "",
   "pingPhone": "",
   "clientAppBaseUrl": ""
 }
