@@ -4,11 +4,13 @@ const htmlToText = require("html-to-text");
 const config = require("config");
 
 module.exports = class Email {
-  constructor(user, url) {
-    this.to = user.email;
-    this.firstName = user.name.split(" ")[0];
-    this.url = url;
-    this.from = `ModusLights <${config.get("appEmail")}>`;
+  constructor(user) {
+    this.to = config.get("appEmail");
+    this.email = user.email;
+    this.phone = user.phone;
+    this.firstName = user.name;
+    this.message = user.message;
+    this.from = config.get("appEmail");
   }
 
   newTransport() {
@@ -39,7 +41,9 @@ module.exports = class Email {
     // 1) Render HTML based on a pug template
     const html = pug.renderFile(`${__dirname}/../views/email/${template}.pug`, {
       firstName: this.firstName,
-      url: this.url,
+      message: this.message,
+      email: this.email,
+      phone: this.phone,
       pingEmail: config.get("appEmail"),
       pingPhone: config.get("pingPhone"),
       subject
@@ -58,8 +62,8 @@ module.exports = class Email {
     await this.newTransport().sendMail(mailOptions);
   }
 
-  async sendWelcome() {
-    await this.send("welcome", "Welcome to Ping!");
+  async sendModusligtsInfo(name) {
+    await this.send("welcome", `A New Message from ${name}`);
   }
 
   async sendPasswordReset() {

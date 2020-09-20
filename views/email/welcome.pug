@@ -1,8 +1,14 @@
 extends baseEmail
 
 block content
-  p Welcome #{firstName},
-  p Thanks for opening a Ping! account. Click on the below link / button to activate your account and start pinging
+  p Message from #{firstName},
+
+  p Client Information :
+  p
+  span Email:  #{email}
+  p Phone: #{phone}
+  p
+  p #{message}
   table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
     tbody
       tr
@@ -11,11 +17,3 @@ block content
             tbody
               tr
                 td
-                  a(href=`${url}`, target='_blank') Activate Your Account
-  p For any questions, concerns or support issues, please contact us at : 
-  p
-  span Phone:  #{pingPhone} 
-  p Email: #{pingEmail}
-  p
-  p Regard,
-  p Ping Team
